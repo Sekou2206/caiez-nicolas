@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Caiez Nicolas Couverture</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Nicolas Caiez, couvreur zingueur à Talmas dans la Somme. Couverture, zinguerie, bardage et fenêtres de toit, en neuf et en rénovation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;600;800;900&display=swap">
+<style>
+:root{
+  --nuit:#141719;
+  --ardoise:#20252A;
+  --zinc:#9AA1A6;
+  --brume:#C9CDCF;
+  --lait:#ECEAE5;
+  --craie:#F7F6F2;
+  --bordeaux:#7A1218;
+  --rose:#E2A6A9;
+  --tuile:#B4552F;
+  --filet-n:rgba(247,246,242,.14);
+  --filet-c:rgba(20,23,25,.14);
+  --pochoir:"Big Shoulders Stencil Display","Big Shoulders Stencil","Arial Narrow",Impact,sans-serif;
+  --texte:"Brygada 1918",Georgia,"Times New Roman",serif;
+  --g:clamp(20px,4.5vw,64px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--craie);color:var(--nuit);font-family:var(--texte);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--nuit)}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.cadre{max-width:1440px;margin:0 auto;padding-left:max(var(--g),env(safe-area-inset-left,0px));padding-right:max(var(--g),env(safe-area-inset-right,0px))}
+.p{font-family:var(--pochoir);text-transform:uppercase;letter-spacing:.02em;line-height:.9}
+.sur{font-family:var(--pochoir);font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:15px}
+h2{margin:0;font-family:var(--texte);font-weight:400;font-size:clamp(34px,4.6vw,66px);line-height:1.04;letter-spacing:-.015em;text-wrap:balance}
+h2 i{color:var(--bordeaux)}
+.sombre h2 i{color:var(--rose)}
+
+.entete{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--nuit);color:var(--craie);border-bottom:1px solid var(--filet-n)}
+.entete .cadre{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:16px}
+.marque{display:flex;align-items:center;gap:14px;text-decoration:none}
+.marque-c{font-family:var(--pochoir);font-weight:900;font-size:34px;line-height:.8;letter-spacing:.03em}
+.marque-n{display:flex;flex-direction:column;gap:4px;line-height:1}
+.marque-n b{font-family:var(--texte);font-style:italic;font-weight:600;font-size:19px;color:var(--rose)}
+.marque-n small{font-family:var(--pochoir);font-weight:600;font-size:11px;letter-spacing:.2em;color:var(--zinc)}
+.menu{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-size:15px}
+.menu a{text-decoration:none;color:var(--brume);transition:color .2s}
+.menu a:hover{color:var(--craie)}
+.appel{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;background:var(--bordeaux);color:var(--craie);text-decoration:none;font-family:var(--pochoir);font-weight:800;font-size:19px;letter-spacing:.06em;white-space:nowrap;transition:background .2s}
+.appel:hover{background:#951820}
+
+.heros{background:var(--nuit);color:var(--craie);position:relative;overflow:hidden}
+.heros .cadre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);padding-block:clamp(48px,7vw,104px) 0;position:relative;z-index:1}
+.heros-texte{min-width:0;align-self:center;padding-bottom:clamp(40px,6vw,96px)}
+.heros .sur{color:var(--zinc);display:block;margin-bottom:26px}
+.heros h1{margin:0;font-weight:400;font-size:clamp(42px,6.2vw,96px);line-height:1;letter-spacing:-.02em;text-wrap:balance}
+.heros h1 i{color:var(--rose)}
+.heros p.chapo{margin:30px 0 0;max-width:44ch;font-size:clamp(17px,1.35vw,20px);color:var(--brume)}
+.boutons{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 24px;text-decoration:none;font-family:var(--pochoir);font-weight:800;font-size:20px;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}
+.btn-b{background:var(--bordeaux);color:var(--craie)}
+.btn-b:hover{background:#951820}
+.btn-l{border:1px solid var(--filet-n);color:var(--craie)}
+.btn-l:hover{border-color:var(--craie)}
+.faits{display:flex;flex-wrap:wrap;gap:16px 36px;margin-top:clamp(40px,5vw,64px);padding-top:22px;border-top:1px solid var(--filet-n)}
+.faits div{min-width:0}
+.faits b{display:block;font-family:var(--pochoir);font-weight:800;font-size:24px;letter-spacing:.04em;line-height:1}
+.faits span{font-size:14px;color:var(--zinc)}
+.heros-photo{position:relative;min-width:0;align-self:end}
+.heros-photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.heros-photo .vertical{position:absolute;left:-46px;bottom:24px;writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--pochoir);font-weight:800;font-size:15px;letter-spacing:.3em;color:var(--zinc)}
+.heros-photo figcaption{position:absolute;right:0;bottom:0;background:var(--craie);color:var(--nuit);padding:12px 16px;font-size:14px;max-width:80%}
+.filigrane{position:absolute;left:0;right:0;bottom:-.14em;text-align:center;font-family:var(--pochoir);font-weight:900;font-size:clamp(120px,30vw,460px);line-height:.8;color:rgba(247,246,242,.035);pointer-events:none;white-space:nowrap;user-select:none}
+
+.nuancier{padding-block:clamp(80px,10vw,150px)}
+.tete{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr);gap:24px clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(40px,5vw,72px)}
+.tete .sur{display:block;margin-bottom:18px;color:var(--bordeaux)}
+.sombre .tete .sur{color:var(--rose)}
+.tete p{margin:0;max-width:46ch;color:#4D5459}
+.sombre .tete p{color:var(--brume)}
+.echantillons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(10px,1.4vw,20px);list-style:none;margin:0;padding:0}
+.echantillon{min-width:0}
+.matiere{aspect-ratio:3/4;position:relative;box-shadow:0 1px 0 rgba(0,0,0,.06),0 20px 40px -24px rgba(20,23,25,.45);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.echantillon:hover .matiere{transform:translateY(-8px)}
+.matiere::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(255,255,255,.22),transparent 45%,rgba(0,0,0,.18))}
+.m-tuile{background:radial-gradient(ellipse 22px 12px at 50% 100%,rgba(0,0,0,.22),transparent 70%) 0 0/36px 30px,repeating-linear-gradient(180deg,#BC5B34 0 27px,#843A20 27px 30px)}
+.m-ardoise{background:repeating-linear-gradient(90deg,transparent 0 44px,#16191C 44px 46px) 0 0/46px 52px,repeating-linear-gradient(180deg,#323A40 0 24px,#191D21 24px 26px),#2B3237}
+.m-zinc{background:repeating-linear-gradient(90deg,#AEB4B8 0 54px,#D3D7D9 54px 56px,#878D91 56px 58px)}
+.m-acier{background:linear-gradient(120deg,#25292C 0,#41474C 38%,#2A2E31 52%,#3A4045 80%,#222629 100%)}
+.m-bac{background:repeating-linear-gradient(90deg,#6A7379 0 12px,#8D959B 12px 17px,#545B61 17px 22px,#6A7379 22px 46px)}
+.echantillon h3{margin:18px 0 4px;font-family:var(--pochoir);font-weight:800;font-size:26px;letter-spacing:.04em;line-height:1;text-transform:uppercase}
+.echantillon p{margin:0;font-size:15px;color:#4D5459}
+
+.chantiers{background:var(--nuit);color:var(--craie);padding-block:clamp(80px,10vw,150px)}
+.selecteur{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:clamp(24px,3vw,48px);align-items:start}
+.liste{list-style:none;margin:0;padding:0;border-top:1px solid var(--filet-n)}
+.liste button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;align-items:center;width:100%;padding:16px 0;border-bottom:1px solid var(--filet-n);cursor:pointer;color:var(--zinc);transition:color .25s}
+.liste button:hover{color:var(--craie)}
+.liste button:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+.liste img{width:72px;height:72px;object-fit:cover;filter:grayscale(1) brightness(.75);transition:filter .3s}
+.liste b{display:block;font-family:var(--pochoir);font-weight:800;font-size:clamp(22px,2vw,30px);line-height:1;letter-spacing:.03em;text-transform:uppercase}
+.liste small{font-size:14px}
+.liste button[aria-selected="true"]{color:var(--craie)}
+.liste button[aria-selected="true"] img{filter:none}
+.liste button[aria-selected="true"] b{color:var(--rose)}
+.fiche{min-width:0;border-top:1px solid var(--filet-n);padding-top:18px}
+.fiche dl{margin:0;display:grid;gap:16px}
+.fiche dt{font-family:var(--pochoir);font-weight:600;font-size:13px;letter-spacing:.18em;color:var(--zinc);text-transform:uppercase}
+.fiche dd{margin:4px 0 0;font-size:16px}
+.fiche ul{margin:6px 0 0;padding:0;list-style:none}
+.fiche li{padding:7px 0;border-bottom:1px solid var(--filet-n);font-size:15px;color:var(--brume)}
+
+.comparer{position:relative;overflow:hidden;background:var(--ardoise);user-select:none;-webkit-user-select:none;touch-action:pan-y;--pos:50%;aspect-ratio:4/5;max-width:100%}
+.comparer img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.comparer .avant{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.comparer .ligne{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:var(--craie);pointer-events:none}
+.comparer .ligne span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--craie);color:var(--nuit);font-family:var(--pochoir);font-weight:800;font-size:14px;letter-spacing:.12em;padding:8px 10px;white-space:nowrap}
+.comparer .mot{position:absolute;top:14px;font-family:var(--pochoir);font-weight:800;font-size:16px;letter-spacing:.14em;color:var(--craie);background:rgba(20,23,25,.7);padding:5px 9px;pointer-events:none}
+.comparer .mot-av{left:14px}
+.comparer .mot-ap{right:14px;background:var(--bordeaux)}
+.comparer input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.comparer:has(input:focus-visible) .ligne span{outline:2px solid var(--rose);outline-offset:3px}
+.comparer img.fond{transition:opacity .35s}
+.comparer.bouge{animation:bouge 2.2s cubic-bezier(.65,0,.35,1) .6s 1}
+@property --pos{syntax:"<percentage>";inherits:true;initial-value:50%}
+@keyframes bouge{0%{--pos:50%}35%{--pos:28%}70%{--pos:68%}100%{--pos:50%}}
+
+.anatomie{padding-block:clamp(80px,10vw,150px);background:var(--lait)}
+.coupe{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(24px,4vw,64px);align-items:center}
+.coupe-svg{min-width:0;overflow-x:auto}
+.coupe svg{width:100%;height:auto;display:block;min-width:520px}
+.coupe svg g[data-part]{transition:opacity .3s}
+.coupe svg.focus g[data-part]{opacity:.22}
+.coupe svg.focus g[data-part].on{opacity:1}
+.pieces{list-style:none;margin:0;padding:0;border-top:1px solid var(--filet-c)}
+.pieces li{border-bottom:1px solid var(--filet-c)}
+.pieces button{all:unset;box-sizing:border-box;display:flex;justify-content:space-between;align-items:baseline;gap:16px;width:100%;padding:12px 0;cursor:pointer}
+.pieces button:focus-visible{outline:2px solid var(--bordeaux);outline-offset:2px}
+.pieces b{font-family:var(--pochoir);font-weight:800;font-size:22px;letter-spacing:.04em;text-transform:uppercase;line-height:1.1;transition:color .2s}
+.pieces small{font-size:14px;color:#5E656A;text-align:right}
+.pieces li.on b,.pieces button:hover b{color:var(--bordeaux)}
+
+.prestations{padding-block:clamp(80px,10vw,150px)}
+.accordeon{border-top:1px solid var(--filet-c)}
+.accordeon details{border-bottom:1px solid var(--filet-c)}
+.accordeon summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr) 40px;gap:16px clamp(16px,3vw,48px);align-items:center;padding:clamp(20px,2.4vw,30px) 0}
+.accordeon summary::-webkit-details-marker{display:none}
+.accordeon summary h3{margin:0;font-family:var(--pochoir);font-weight:900;font-size:clamp(34px,4.4vw,64px);letter-spacing:.02em;line-height:.9;text-transform:uppercase;transition:color .25s}
+.accordeon summary p{margin:0;color:#4D5459;font-size:16px}
+.accordeon summary .plus{width:40px;height:40px;border:1px solid var(--filet-c);position:relative;justify-self:end;transition:transform .35s,background .25s}
+.accordeon summary .plus::before,.accordeon summary .plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:var(--nuit);transform:translate(-50%,-50%)}
+.accordeon summary .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.accordeon details[open] summary .plus{transform:rotate(45deg);background:var(--bordeaux);border-color:var(--bordeaux)}
+.accordeon details[open] summary .plus::before,.accordeon details[open] summary .plus::after{background:var(--craie)}
+.accordeon details[open] summary h3,.accordeon summary:hover h3{color:var(--bordeaux)}
+.accordeon .contenu{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr) 40px;gap:16px clamp(16px,3vw,48px);padding-bottom:32px}
+.accordeon .contenu ul{grid-column:2;margin:0;padding:0;list-style:none;columns:2 220px;column-gap:32px}
+.accordeon .contenu li{padding:8px 0;border-bottom:1px solid var(--filet-c);font-size:15px;break-inside:avoid}
+
+.secteur{background:var(--ardoise);color:var(--craie);padding-block:clamp(80px,10vw,140px)}
+.secteur-grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:start}
+.communes{margin:28px 0 0;font-family:var(--pochoir);font-weight:800;font-size:clamp(40px,6vw,92px);line-height:.95;letter-spacing:.01em;text-transform:uppercase;color:rgba(247,246,242,.28);text-wrap:balance}
+.communes span{color:var(--craie)}
+.communes span.ici{color:var(--rose)}
+.promesses{list-style:none;margin:0;padding:0;border-top:1px solid var(--filet-n)}
+.promesses li{padding:22px 0;border-bottom:1px solid var(--filet-n)}
+.promesses b{display:block;font-family:var(--pochoir);font-weight:800;font-size:24px;letter-spacing:.04em;text-transform:uppercase;line-height:1;margin-bottom:8px}
+.promesses span{color:var(--brume);font-size:16px}
+
+.contact{background:var(--bordeaux);color:var(--craie);padding-block:clamp(80px,10vw,140px);position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 58px,rgba(0,0,0,.08) 58px 60px);pointer-events:none}
+.contact .cadre{position:relative}
+.contact .sur{color:var(--rose)}
+.contact h2{margin-top:18px;max-width:18ch;color:var(--craie)}
+.contact h2 i{color:var(--craie)}
+.numero{display:block;margin-top:clamp(32px,4vw,56px);font-family:var(--pochoir);font-weight:900;font-size:clamp(64px,13vw,210px);line-height:.85;letter-spacing:.01em;text-decoration:none;color:var(--craie);font-variant-numeric:tabular-nums;user-select:all;-webkit-user-select:all;overflow-wrap:anywhere}
+.coords{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:clamp(40px,5vw,64px);padding-top:24px;border-top:1px solid rgba(247,246,242,.3)}
+.coords small{display:block;font-family:var(--pochoir);font-weight:600;font-size:13px;letter-spacing:.18em;color:var(--rose);text-transform:uppercase;margin-bottom:6px}
+.coords div{min-width:0;font-size:17px}
+.copier{all:unset;cursor:pointer;border-bottom:1px solid rgba(247,246,242,.5);font-size:17px}
+.copier:hover{border-color:var(--craie)}
+.copier:focus-visible{outline:2px solid var(--craie);outline-offset:3px}
+
+.pied{background:var(--nuit);color:var(--zinc);font-size:14px}
+.pied .cadre{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px;padding-block:28px}
+.pied a{text-decoration:none;color:var(--craie)}
+
+@media (max-width:1100px){
+  .selecteur{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .fiche{grid-column:1 / -1}
+  .fiche dl{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .echantillons{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .menu{display:none}
+  .heros .cadre,.tete,.coupe,.secteur-grille{grid-template-columns:minmax(0,1fr)}
+  .heros-photo{max-width:520px;margin-left:46px}
+  .selecteur{grid-template-columns:minmax(0,1fr)}
+  .fiche dl{grid-template-columns:minmax(0,1fr)}
+  .echantillons{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .accordeon summary{grid-template-columns:minmax(0,1fr) 40px}
+  .accordeon summary p{grid-column:1;grid-row:2}
+  .accordeon summary .plus{grid-column:2;grid-row:1}
+  .accordeon .contenu{grid-template-columns:minmax(0,1fr)}
+  .accordeon .contenu ul{grid-column:1}
+  .coords{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:480px){
+  .marque-n small{display:none}
+  .appel{font-size:16px;padding:9px 12px}
+  .heros-photo{margin-left:34px}
+  .heros-photo .vertical{left:-34px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="marque" href="#haut" aria-label="Caiez Nicolas, accueil">
+      <span class="marque-c">CAIEZ</span>
+      <span class="marque-n"><b>Nicolas</b><small>COUVERTURE · ZINGUERIE</small></span>
+    </a>
+    <ul class="menu">
+      <li><a href="#materiaux">Matériaux</a></li>
+      <li><a href="#chantiers">Chantiers</a></li>
+      <li><a href="#prestations">Prestations</a></li>
+      <li><a href="#secteur">Secteur</a></li>
+    </ul>
+    <a class="appel" href="tel:+33782039959">07 82 03 99 59</a>
+  </div>
+</header>
+
+<main id="haut">
+  <section class="heros">
+    <div class="cadre">
+      <div class="heros-texte">
+        <span class="sur">Couvreur zingueur à Talmas, Somme</span>
+        <h1>Des toits faits pour traverser <i>les hivers picards.</i></h1>
+        <p class="chapo">Nicolas Caiez pose, rénove et protège les toitures de la Somme. Tuile, ardoise, zinc ou acier, chaque chantier est mené par l'artisan lui même, avec une exigence de finition rare.</p>
+        <div class="boutons">
+          <a class="btn btn-b" href="tel:+33782039959">Demander un devis</a>
+          <a class="btn btn-l" href="#chantiers">Voir les chantiers</a>
+        </div>
+        <div class="faits">
+          <div><b>Neuf et rénovation</b><span>Maisons, granges, bâtiments</span></div>
+          <div><b>Devis sur place</b><span>Visite de votre toiture</span></div>
+          <div><b>Un seul artisan</b><span>Du début à la fin</span></div>
+        </div>
+      </div>
+      <figure class="heros-photo" style="margin:0">
+        <span class="vertical">ZINGUERIE · ACIER LAQUÉ</span>
+        <img src="img/zinc-apres.jpg" alt="Couvertine en acier laqué anthracite posée sur un acrotère" width="822" height="1100">
+        <figcaption>Couvertine anthracite sur acrotère, toiture bac acier.</figcaption>
+      </figure>
+    </div>
+    <div class="filigrane" aria-hidden="true">CAIEZ</div>
+  </section>
+
+  <section class="nuancier" id="materiaux">
+    <div class="cadre">
+      <div class="tete">
+        <div>
+          <span class="sur">Le nuancier</span>
+          <h2>Cinq matériaux, <i>choisis avec vous.</i></h2>
+        </div>
+        <p>Le bon matériau dépend de la maison, de son exposition et du caractère du bâti. Nicolas vous conseille sur place, échantillons en main.</p>
+      </div>
+      <ul class="echantillons">
+        <li class="echantillon"><div class="matiere m-tuile"></div><h3>Tuile terre cuite</h3><p>La couverture traditionnelle de nos villages, chaude et durable.</p></li>
+        <li class="echantillon"><div class="matiere m-ardoise"></div><h3>Ardoise</h3><p>Fine et sombre, pour les toitures de caractère.</p></li>
+        <li class="echantillon"><div class="matiere m-zinc"></div><h3>Zinc</h3><p>Chéneaux, gouttières et noues façonnés à la main.</p></li>
+        <li class="echantillon"><div class="matiere m-acier"></div><h3>Acier laqué</h3><p>Couvertines et finitions nettes, teinte anthracite.</p></li>
+        <li class="echantillon"><div class="matiere m-bac"></div><h3>Bac acier</h3><p>Toitures et bardages robustes pour les grands volumes.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chantiers sombre" id="chantiers">
+    <div class="cadre">
+      <div class="tete">
+        <div>
+          <span class="sur">Avant, après</span>
+          <h2>Chaque chantier, <i>photographié tel quel.</i></h2>
+        </div>
+        <p>Choisissez un chantier puis faites glisser l'image. Aucune retouche, seulement le travail.</p>
+      </div>
+      <div class="selecteur">
+        <ul class="liste" role="tablist" aria-label="Chantiers">
+          <li><button role="tab" aria-selected="true" data-i="0"><img src="img/tuiles-apres.jpg" alt=""><span><b>Toiture en tuiles</b><small>Réfection complète</small></span></button></li>
+          <li><button role="tab" aria-selected="false" data-i="1"><img src="img/zinc-apres.jpg" alt=""><span><b>Couvertine</b><small>Acrotère, acier laqué</small></span></button></li>
+          <li><button role="tab" aria-selected="false" data-i="2"><img src="img/combles-apres.jpg" alt=""><span><b>Fenêtre de toit</b><small>Charpente ancienne</small></span></button></li>
+          <li><button role="tab" aria-selected="false" data-i="3"><img src="img/pignon-apres.jpg" alt=""><span><b>Bardage de pignon</b><small>Bac acier gris</small></span></button></li>
+        </ul>
+        <div class="comparer bouge" id="comparer">
+          <img class="fond" id="img-ap" src="img/tuiles-apres.jpg" alt="Après travaux" width="876" height="1100">
+          <div class="avant"><img class="fond" id="img-av" src="img/tuiles-avant.jpg" alt="Avant travaux" width="876" height="1100"></div>
+          <span class="mot mot-av">AVANT</span><span class="mot mot-ap">APRÈS</span>
+          <div class="ligne"><span>GLISSER</span></div>
+          <input type="range" id="curseur" min="0" max="100" value="50" aria-label="Comparer avant et après">
+        </div>
+        <div class="fiche" aria-live="polite">
+          <dl>
+            <div><dt>Ouvrage</dt><dd id="f-ouvrage"></dd></div>
+            <div><dt>Matériaux</dt><dd id="f-mat"></dd></div>
+            <div><dt>Travaux réalisés</dt><dd><ul id="f-travaux"></ul></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="anatomie" id="anatomie">
+    <div class="cadre">
+      <div class="tete">
+        <div>
+          <span class="sur">Anatomie d'une toiture</span>
+          <h2>Tout ce qui vous protège, <i>du faîtage à la descente.</i></h2>
+        </div>
+        <p>Une toiture est un assemblage précis. Survolez chaque élément pour voir où il se trouve : Nicolas intervient sur chacun d'eux.</p>
+      </div>
+      <div class="coupe">
+        <div class="coupe-svg">
+          <svg id="schema" viewBox="0 0 800 440" role="img" aria-label="Coupe d'une toiture avec ses éléments">
+            <line x1="20" y1="420" x2="780" y2="420" stroke="#9AA1A6" stroke-width="1"/>
+            <path d="M560 50 L760 148" stroke="#C9CDCF" stroke-width="18" fill="none"/>
+            <g data-part="mur"><rect x="112" y="292" width="46" height="128" fill="#8A4A3A"/><path d="M112 310h46M112 330h46M112 350h46M112 370h46M112 390h46M112 410h46" stroke="#6E3529" stroke-width="1.5"/></g>
+            <g transform="rotate(-26.07 90 280)">
+              <g data-part="chevron"><rect x="86" y="280" width="527" height="20" fill="#A7865F"/><path d="M86 290h527" stroke="#8D6E4B" stroke-width="1"/></g>
+              <g data-part="ecran"><rect x="86" y="275" width="527" height="5" fill="#2F6F7E"/></g>
+              <g data-part="liteaux">
+                <rect x="100" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="134" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="168" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="202" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="236" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="270" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="304" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="440" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="474" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="508" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="542" y="263" width="11" height="12" fill="#7C5C3B"/><rect x="576" y="263" width="11" height="12" fill="#7C5C3B"/>
+              </g>
+              <g data-part="tuiles" fill="#B4552F" stroke="#7E3519" stroke-width="1.5">
+                <rect x="78" y="247" width="46" height="15" rx="3"/><rect x="112" y="247" width="46" height="15" rx="3"/><rect x="146" y="247" width="46" height="15" rx="3"/><rect x="180" y="247" width="46" height="15" rx="3"/><rect x="214" y="247" width="46" height="15" rx="3"/><rect x="248" y="247" width="46" height="15" rx="3"/><rect x="282" y="247" width="46" height="15" rx="3"/><rect x="420" y="247" width="46" height="15" rx="3"/><rect x="454" y="247" width="46" height="15" rx="3"/><rect x="488" y="247" width="46" height="15" rx="3"/><rect x="522" y="247" width="46" height="15" rx="3"/><rect x="556" y="247" width="46" height="15" rx="3"/>
+              </g>
+              <g data-part="fenetre"><rect x="330" y="236" width="88" height="34" fill="#1D2023"/><rect x="336" y="241" width="76" height="22" fill="#9FC3D3"/><path d="M340 258 L360 244" stroke="#fff" stroke-width="2" opacity=".6"/></g>
+            </g>
+            <g data-part="faitage"><path d="M532 58 Q560 14 590 58 Z" fill="#8F3A1C"/><path d="M540 52 Q560 24 582 52" stroke="#6A2A12" stroke-width="2" fill="none"/></g>
+            <g data-part="gouttiere"><path d="M58 286 A16 16 0 0 0 90 286 Z" fill="#A9AFB3" stroke="#6F767B" stroke-width="1.5"/></g>
+            <g data-part="descente"><rect x="68" y="300" width="9" height="120" fill="#A9AFB3"/><rect x="64" y="340" width="17" height="5" fill="#6F767B"/><rect x="64" y="390" width="17" height="5" fill="#6F767B"/></g>
+          </svg>
+        </div>
+        <ul class="pieces" id="pieces">
+          <li data-part="faitage"><button type="button"><b>Faîtage</b><small>Le sommet du toit</small></button></li>
+          <li data-part="tuiles"><button type="button"><b>Couverture</b><small>Tuiles ou ardoises</small></button></li>
+          <li data-part="fenetre"><button type="button"><b>Fenêtre de toit</b><small>Lumière des combles</small></button></li>
+          <li data-part="liteaux"><button type="button"><b>Liteaux</b><small>Support des tuiles</small></button></li>
+          <li data-part="ecran"><button type="button"><b>Écran sous toiture</b><small>Seconde barrière</small></button></li>
+          <li data-part="chevron"><button type="button"><b>Chevrons</b><small>La charpente</small></button></li>
+          <li data-part="gouttiere"><button type="button"><b>Gouttière</b><small>Zinguerie</small></button></li>
+          <li data-part="descente"><button type="button"><b>Descente</b><small>Évacuation des eaux</small></button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="prestations" id="prestations">
+    <div class="cadre">
+      <div class="tete">
+        <div>
+          <span class="sur">Prestations</span>
+          <h2>Ce que Nicolas <i>réalise pour vous.</i></h2>
+        </div>
+        <p>Ouvrez chaque prestation pour voir le détail des travaux compris.</p>
+      </div>
+      <div class="accordeon">
+        <details open>
+          <summary><h3>Couverture</h3><p>Pose neuve et réfection complète en tuile, ardoise ou bac acier.</p><span class="plus" aria-hidden="true"></span></summary>
+          <div class="contenu"><ul><li>Dépose de l'ancienne couverture</li><li>Remplacement des liteaux</li><li>Pose d'un écran sous toiture</li><li>Pose des tuiles ou ardoises</li><li>Faîtage et rives</li><li>Évacuation des gravats</li></ul></div>
+        </details>
+        <details>
+          <summary><h3>Zinguerie</h3><p>Tout ce qui guide l'eau hors de votre toit, façonné sur mesure.</p><span class="plus" aria-hidden="true"></span></summary>
+          <div class="contenu"><ul><li>Gouttières et descentes</li><li>Chéneaux encaissés</li><li>Noues et abergements</li><li>Couvertines d'acrotère</li><li>Habillage de cheminée</li><li>Bandeaux et rives</li></ul></div>
+        </details>
+        <details>
+          <summary><h3>Bardage</h3><p>Pignons et façades protégés du vent et de la pluie.</p><span class="plus" aria-hidden="true"></span></summary>
+          <div class="contenu"><ul><li>Montage de l'échafaudage</li><li>Dépose des anciennes tôles</li><li>Ossature de fixation</li><li>Pose du bardage bac acier</li><li>Reprise des rives et angles</li><li>Raccords avec la toiture</li></ul></div>
+        </details>
+        <details>
+          <summary><h3>Fenêtres de toit</h3><p>Faire entrer la lumière dans les combles, même sur charpente ancienne.</p><span class="plus" aria-hidden="true"></span></summary>
+          <div class="contenu"><ul><li>Ouverture dans la couverture</li><li>Chevêtre dans la charpente</li><li>Pose de la fenêtre</li><li>Raccords d'étanchéité</li><li>Remplacement d'anciennes fenêtres</li><li>Finitions extérieures</li></ul></div>
+        </details>
+        <details>
+          <summary><h3>Rénovation</h3><p>Réparer avant que le problème ne s'aggrave.</p><span class="plus" aria-hidden="true"></span></summary>
+          <div class="contenu"><ul><li>Recherche de fuites</li><li>Remplacement de tuiles cassées</li><li>Remise en état après tempête</li><li>Démoussage et nettoyage</li><li>Reprise de solins</li><li>Conseil d'entretien</li></ul></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="secteur sombre" id="secteur">
+    <div class="cadre secteur-grille">
+      <div>
+        <span class="sur" style="color:var(--rose)">Secteur d'intervention</span>
+        <p class="communes"><span class="ici">Talmas</span>, <span>Naours</span>, Beauval, <span>Doullens</span>, Flesselles, Bernaville, <span>Amiens</span> et alentours.</p>
+      </div>
+      <ul class="promesses">
+        <li><b>Un seul interlocuteur</b><span>Nicolas répond au téléphone, vient chez vous et réalise les travaux.</span></li>
+        <li><b>Un devis lisible</b><span>Chaque poste est détaillé : matériaux, surfaces, délais.</span></li>
+        <li><b>Un chantier propre</b><span>Protection des abords et nettoyage complet en fin de travaux.</span></li>
+        <li><b>Des photos à la clé</b><span>Vous voyez l'état avant et après, comme sur ce site.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cadre">
+      <span class="sur">Contact et devis</span>
+      <h2>Un projet de toiture&nbsp;? <i>Appelez Nicolas.</i></h2>
+      <a class="numero" href="tel:+33782039959">07 82 03 99 59</a>
+      <div class="coords">
+        <div><small>Adresse</small>17 rue d'Amiens<br>80260 Talmas</div>
+        <div><small>Devis</small>Visite sur place<br>de votre toiture</div>
+        <div><small>Numéro</small><button class="copier" type="button" id="copier">Copier le numéro</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <span class="marque"><span class="marque-c" style="font-size:26px;color:var(--craie)">CAIEZ</span><span class="marque-n"><b>Nicolas</b></span></span>
+    <span>Couverture et zinguerie, neuf et rénovation, Talmas 80260</span>
+    <span>Site par <a href="https://scproject.tech/" target="_blank" rel="noopener">SC Projet</a></span>
+  </div>
+</footer>
+
+<script>
+var chantiers=[
+  {k:"tuiles",o:"Réfection complète de couverture",m:"Tuile terre cuite, zinc",t:["Dépose de l'ancienne couverture","Pose de tuiles terre cuite neuves","Chéneau en zinc refait le long du mur"]},
+  {k:"zinc",o:"Couvertine sur acrotère",m:"Acier laqué anthracite",t:["Nettoyage de l'acrotère","Pose de la couvertine","Raccord avec la toiture bac acier"]},
+  {k:"combles",o:"Création d'une fenêtre de toit",m:"Fenêtre de toit, charpente chêne",t:["Ouverture dans la couverture","Chevêtre dans la charpente ancienne","Pose et raccords d'étanchéité"]},
+  {k:"pignon",o:"Bardage de pignon",m:"Bac acier gris",t:["Montage de l'échafaudage","Dépose de la tôle rouillée","Pose du bardage et reprise des rives"]}
+];
+var cmp=document.getElementById("comparer"),cur=document.getElementById("curseur"),ap=document.getElementById("img-ap"),av=document.getElementById("img-av");
+function montrer(i){
+  var c=chantiers[i];
+  ap.src="img/"+c.k+"-apres.jpg";av.src="img/"+c.k+"-avant.jpg";
+  ap.alt=c.o+", après travaux";av.alt=c.o+", avant travaux";
+  document.getElementById("f-ouvrage").textContent=c.o;
+  document.getElementById("f-mat").textContent=c.m;
+  var ul=document.getElementById("f-travaux");ul.innerHTML="";
+  c.t.forEach(function(x){var li=document.createElement("li");li.textContent=x;ul.appendChild(li)});
+  document.querySelectorAll(".liste button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.i==i?"true":"false")});
+  cur.value=50;cmp.style.setProperty("--pos","50%");
+}
+document.querySelectorAll(".liste button").forEach(function(b){b.addEventListener("click",function(){cmp.classList.remove("bouge");montrer(+b.dataset.i)})});
+cur.addEventListener("input",function(){cmp.classList.remove("bouge");cmp.style.setProperty("--pos",cur.value+"%")});
+cmp.addEventListener("animationend",function(){cmp.classList.remove("bouge")});
+montrer(0);
+
+var schema=document.getElementById("schema");
+function surligner(p){
+  schema.classList.toggle("focus",!!p);
+  schema.querySelectorAll("g[data-part]").forEach(function(g){g.classList.toggle("on",g.dataset.part===p)});
+  document.querySelectorAll("#pieces li").forEach(function(li){li.classList.toggle("on",li.dataset.part===p)});
+}
+document.querySelectorAll("#pieces li").forEach(function(li){
+  var b=li.querySelector("button");
+  li.addEventListener("mouseenter",function(){surligner(li.dataset.part)});
+  b.addEventListener("focus",function(){surligner(li.dataset.part)});
+  b.addEventListener("click",function(){surligner(li.dataset.part)});
+});
+document.getElementById("pieces").addEventListener("mouseleave",function(){surligner(null)});
+schema.querySelectorAll("g[data-part]").forEach(function(g){
+  g.style.cursor="pointer";
+  g.addEventListener("mouseenter",function(){surligner(g.dataset.part)});
+  g.addEventListener("mouseleave",function(){surligner(null)});
+});
+
+var b=document.getElementById("copier");
+b.addEventListener("click",function(){
+  function fait(t){b.textContent=t;setTimeout(function(){b.textContent="Copier le numéro"},2200)}
+  function sel(){var n=document.querySelector(".numero"),s=window.getSelection(),g=document.createRange();g.selectNodeContents(n);s.removeAllRanges();s.addRange(g);fait("Sélectionné, faites Cmd+C")}
+  try{navigator.clipboard.writeText("07 82 03 99 59").then(function(){fait("Numéro copié")},sel)}catch(e){sel()}
+});
+</script>
+
+</body>
+</html>
