@@ -6,6 +6,7 @@
 <title>Entreprise Caiez, couverture et zinguerie à Talmas</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Entreprise Caiez, couvreur zingueur à Talmas dans la Somme. Couverture, zinguerie, bardage et fenêtres de toit, en neuf et en rénovation.">
+<link rel="preload" as="image" href="img/ardoise-coucher.jpg" media="(max-width:860px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&display=swap">
@@ -241,6 +242,16 @@ h2 i{color:var(--bordeaux)}
   .coords{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:860px){
+  .heros{background:var(--nuit) url(img/ardoise-coucher.jpg) 50% 72%/cover no-repeat}
+  .heros::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(20,23,25,.7) 0%,rgba(20,23,25,.42) 38%,rgba(20,23,25,.3) 62%,rgba(20,23,25,.88) 100%)}
+  .heros .cadre{min-height:calc(100svh - var(--h,130px));padding-block:40px 0}
+  .heros-texte{align-self:end;padding-bottom:36px}
+  .heros-photo,.filigrane{display:none}
+  .heros .sur{color:var(--brume)}
+  .heros h1,.heros p.chapo,.faits{text-shadow:0 1px 18px rgba(0,0,0,.55)}
+  .heros p.chapo{color:var(--lait)}
+  .faits span{color:var(--brume)}
+  .btn-l{background:rgba(20,23,25,.35);border-color:rgba(247,246,242,.45)}
   .coupe svg{min-width:0}
   .coupe-svg{overflow:visible}
   .pieces button{padding:14px 0}
