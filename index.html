@@ -171,7 +171,7 @@ h2 i{color:var(--bordeaux)}
 .onglets button[aria-selected="true"]{background:var(--nuit);color:var(--craie)}
 .onglets button[aria-selected="true"] span{color:var(--rose)}
 .onglets button[aria-selected="true"] b{color:var(--craie)}
-.panneau{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:start;padding-top:clamp(36px,4vw,60px)}
+.panneau{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(28px,5vw,80px);align-items:start;padding-top:clamp(36px,4vw,60px)}
 .panneau[hidden]{display:none}
 .panneau.entre .panneau-texte,.panneau.entre .panneau-photo{animation:entre .6s cubic-bezier(.2,.7,.2,1) both}
 .panneau.entre .panneau-photo{animation-delay:.08s}
@@ -184,9 +184,9 @@ h2 i{color:var(--bordeaux)}
 .panneau li{padding:10px 0;border-bottom:1px solid var(--filet-c);font-size:15px;break-inside:avoid;display:flex;gap:12px}
 .panneau li::before{content:"";flex:none;width:7px;height:7px;margin-top:9px;background:var(--bordeaux)}
 .panneau .btn{margin-top:34px}
-.panneau-photo{margin:0;min-width:0;position:relative}
-.panneau-photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.panneau-photo figcaption{position:absolute;left:0;bottom:0;background:var(--nuit);color:var(--craie);padding:10px 14px;font-size:14px;max-width:85%}
+.panneau-photo{margin:0;min-width:0;position:relative;max-width:400px;justify-self:end;width:100%;margin-top:clamp(0px,3vw,40px)}
+.panneau-photo img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.panneau-photo figcaption{margin-top:10px;font-size:14px;color:#5E656A;padding-left:12px;border-left:2px solid var(--bordeaux)}
 
 .secteur{background:var(--ardoise);color:var(--craie);padding-block:clamp(80px,10vw,140px)}
 .secteur-grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:start}
@@ -233,7 +233,8 @@ h2 i{color:var(--bordeaux)}
   .fiche dl{grid-template-columns:minmax(0,1fr)}
   .echantillons{grid-template-columns:repeat(2,minmax(0,1fr))}
   .panneau{grid-template-columns:minmax(0,1fr)}
-  .panneau-photo{max-width:520px}
+  .panneau-photo{max-width:none;justify-self:start;margin-top:0}
+  .panneau-photo img{aspect-ratio:16/9}
   .onglets{display:flex;overflow-x:auto;scrollbar-width:none}
   .onglets::-webkit-scrollbar{display:none}
   .onglets button{flex:none;border-top:0!important;border-left:1px solid var(--filet-c)!important}
